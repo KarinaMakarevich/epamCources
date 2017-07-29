@@ -8,7 +8,7 @@ out/
 *.iml
 .idea/
 *.iws
-log/
+logs/
 target/
 pom.xml.tag
 pom.xml.releaseBackup
