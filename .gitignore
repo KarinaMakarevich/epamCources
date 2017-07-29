@@ -3,6 +3,7 @@
 out/
 **/nbproject
 *.mf
+*.jar
 *.class
 *.iml
 .idea/
