@@ -1,0 +1,3 @@
+Programmer, Fedotov Dmitryy, 400$, 8 h, IOS-development, junior
+Analyst, Ivanov Ivan Ivanovich, 300$, 6h, java, middle
+Tester, Bihig Kostya Petrovich, 200$, 4h, c#, middle
