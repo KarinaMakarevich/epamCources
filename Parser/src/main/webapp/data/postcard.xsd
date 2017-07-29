@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://by.epam.makarevich/postcard"
+           xmlns:tns="http://by.epam.makarevich/postcard"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="Postcard">
+        <xs:sequence>
+            <xs:element name="postcard-id">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="[A-Z]{2}\d{12}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="theme" type="xs:string"/>
+            <xs:element name="postcard-type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="congratulatory"/>
+                        <xs:enumeration value="usual"/>
+                        <xs:enumeration value="advertising"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="country">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z]+([A-Z]?[a-z]?)+"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="year">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minExclusive value="1900"/>
+                        <xs:maxInclusive value="2017"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="author-information">
+                <xs:complexType>
+                    <xs:attribute name="is-known" type="xs:boolean" use="required"/>
+                    <xs:attribute name="author" type="xs:string" default="Unknown-Author"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="value">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="historical"/>
+                        <xs:enumeration value="collectible"/>
+                        <xs:enumeration value="thematic"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="was-send" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BirthdayPostcard">
+        <xs:complexContent>
+            <xs:extension base="tns:Postcard">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="year-count">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:integer">
+                                <xs:minExclusive value="1"/>
+                                <xs:maxInclusive value="200"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="content">
+                        <xs:complexType>
+                            <xs:attribute name="text" type="xs:string" use="required"/>
+                            <xs:attribute name="is-in-verse" type="xs:boolean" use="required"/>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ComplimentaryPostcard">
+        <xs:complexContent>
+            <xs:extension base="tns:Postcard">
+                <xs:sequence>
+                    <xs:element name="place" type="xs:string"/>
+                    <xs:element name="men-count" type="xs:positiveInteger"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="postcard" type="tns:Postcard" abstract="true"/>
+    <xs:element name="birthday-postcard" type="tns:BirthdayPostcard" substitutionGroup="tns:postcard"/>
+    <xs:element name="complimentary-postcard" type="tns:ComplimentaryPostcard" substitutionGroup="tns:postcard"/>
+
+    <xs:element name="old-cards">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:postcard"
+                            minOccurs="2"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

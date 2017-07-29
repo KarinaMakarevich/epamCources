@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<old-cards xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://by.epam.makarevich/postcard"
+           xs:schemaLocation="http://by.epam.makarevich/postcard  postcard.xsd"
+>
+    <birthday-postcard>
+        <postcard-id>FF123456782000</postcard-id>
+        <theme>jjj</theme>
+        <postcard-type>advertising</postcard-type>
+        <country>USA</country>
+        <year>1999</year>
+        <author-information is-known="true"/>
+        <value>collectible</value>
+        <was-send>true</was-send>
+        <name>jjjjkjkjkjkkj</name>
+        <year-count>150</year-count>
+        <content text="hhhhjj" is-in-verse="true"/>
+    </birthday-postcard>
+    <complimentary-postcard>
+        <postcard-id>KK123654789222</postcard-id>
+        <theme>nam</theme>
+        <postcard-type>usual</postcard-type>
+        <country>Belarus</country>
+        <year>2014</year>
+        <author-information is-known="true"/>
+        <value>historical</value>
+        <was-send>false</was-send>
+        <place>Minsk</place>
+        <men-count>20</men-count>
+    </complimentary-postcard>
+    <complimentary-postcard>
+        <postcard-id>AB123456789124</postcard-id>
+        <theme>Beu</theme>
+        <postcard-type>advertising</postcard-type>
+        <country>Russia</country>
+        <year>2010</year>
+        <author-information is-known="false"/>
+        <value>thematic</value>
+        <was-send>false</was-send>
+        <place>Nesvizh</place>
+        <men-count>12</men-count>
+    </complimentary-postcard>
+</old-cards>

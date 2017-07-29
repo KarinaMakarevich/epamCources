@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OldCards xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://by.epam.makarevich/postcard"
+          xs:schemaLocation="http://by.epam.makarevich/postcard  postcard.xsd"
+>
+    <birthdayPostcard>
+        <postcardId>fff</postcardId>
+        <theme>ddd</theme>
+        <postcardType> Advertising </postcardType>
+        <country></country>
+        <year></year>
+        <authorInformation isKnown=""/>
+        <value></value>
+        <wasSend></wasSend>
+        <name></name>
+        <yearCount></yearCount>
+        <content/>
+    </birthdayPostcard>
+    <complimentaryPostcard>
+        <postcardId></postcardId>
+        <theme></theme>
+        <postcardType></postcardType>
+        <country></country>
+        <year></year>
+        <authorInformation isKnown=""/>
+        <value></value>
+        <wasSend></wasSend>
+        <place></place>
+        <eventTime></eventTime>
+        <menCount></menCount>
+    </complimentaryPostcard>
+</OldCards>
