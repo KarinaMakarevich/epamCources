@@ -1,7 +1,0 @@
-06.04.2017 11:18:57  [main] INFO  by.epam.makarevich.util.checkCharacteristic.CheckAllCharacteristic      - Valid data: 8h
-06.04.2017 11:18:57  [main] INFO  by.epam.makarevich.util.checkCharacteristic.CheckAllCharacteristic      - Valid Programmer characteristics: [Programmer,  Fedotov Dmitryy, 400$, 8h, IOS-development]
-06.04.2017 11:18:57  [main] INFO  by.epam.makarevich.action.ManHourFinder                                 - Find Man-Hours for employees team, Man-Hour = 108000
-06.04.2017 11:18:57  [main] INFO  by.epam.makarevich.action.ManHourFinder                                 - Find employees with payment between 270 500
-06.04.2017 11:18:57  [main] INFO  by.epam.makarevich.action.EmployeeSorter                                - Sort EmployeeTeam{team=[by.epam.makarevich.entity.Tester@e0dae70f, by.epam.makarevich.entity.Programmer@76cb4057, by.epam.makarevich.entity.Analyst@df68f2bc]} by hours
-06.04.2017 11:18:57  [main] INFO  by.epam.makarevich.action.EmployeeSorter                                - Sort EmployeeTeam{team=[by.epam.makarevich.entity.Programmer@76cb4057, by.epam.makarevich.entity.Tester@e0dae70f, by.epam.makarevich.entity.Analyst@df68f2bc]} by name
-06.04.2017 11:18:57  [main] INFO  by.epam.makarevich.action.EmployeeSorter                                - Sort EmployeeTeam{team=[by.epam.makarevich.entity.Programmer@76cb4057, by.epam.makarevich.entity.Tester@e0dae70f, by.epam.makarevich.entity.Analyst@df68f2bc]} by payment
